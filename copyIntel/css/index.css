@@ -1,0 +1,314 @@
+body{
+    width: 100%;
+    height: 2000px;
+    background-color: #0071C5;
+}
+*{
+    margin: 0;
+    padding:0;
+    box-sizing:border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    /*outline: 1px solid red;*/
+}
+.container{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    overflow: hidden;
+}
+/****************************header的样式*****************************/
+.navbar{
+    background-color: #0071C5;
+}
+ul{
+    list-style: none;
+}
+ nav ul li{
+    float: left;
+}
+ .nav-right {
+     text-align: right;
+ }
+.logl{
+    background: url("../img/hdr-spr.png") 0 260px ;
+    background-position:  0 260px;
+}
+.list{
+    line-height: 50px;
+}
+.list li{
+    margin-right: 15px;
+}
+.list button,.nav-right button{
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    color:white;
+}
+.logo,.logl img{
+    height: 50px;
+}
+.form input,.form p,.form button{
+    margin-top: 10px;
+}
+#study,#support{
+    display: none;
+}
+
+.menucollapse{
+    width: 100%;
+    height: 600px;
+    background-color: #080808;
+    position: absolute;
+    top:50px;
+    left:0;
+    display: none;
+    z-index: 9999;
+}
+.menucollapse-header,.menucollapse-body{
+    margin-top: 30px;
+}
+
+#product li,#study li,#support li{
+    margin-top:10px;
+}
+.nav-tabs>li>a:focus{
+    background-color: #eee;
+}
+.nav-tabs>li>a:visited{
+    background-color: #eee;
+}
+/******************************section的样式*******************************88*/
+.sct1,.sct2{
+    width: 100%;
+    /*height: 645px;*/
+    position: relative;
+    overflow: hidden;
+}
+@media screen and (min-width: 1200px) {
+    .sct-content h1{
+        font-size: 5em;
+    }
+    .sct-content{
+        top:55%;
+        left: 15%;
+        position: absolute;
+    }
+}
+@media screen and (min-width:985px) and (max-width: 1199px) {
+    .sct-content h1{
+        font-size: 3em;
+    }
+    .sct-content{
+        top:50%;
+        left: 15%;
+        position: absolute;
+    }
+}
+@media screen and (max-width: 984px) and (min-width: 800px){
+    .sct-content h1{
+        font-size: 2em;
+    }
+    .sct-content{
+        top:35%;
+        left: 15%;
+        position: absolute;
+    }
+}
+@media screen and (max-width: 800px) and (min-width: 768px){
+  .sct1  .sct-content h1{
+        font-size: 18px;
+    }
+   .sct1 .sct-content{
+        top:35%;
+        left: 15%;
+       position: absolute;
+    }
+    .sct2  .sct-content h1{
+        font-size: 2em;
+    }
+}
+@media screen and (max-width: 767px){
+   .sct1 .sct-content{
+        display: none;
+    }
+}
+.sct-content{
+    width: 70%;
+    height: 300px;
+    margin: auto;
+
+    color: white;
+    text-align: center;
+}
+.gray{
+    background-color: #555555;
+}
+.ui-bar{
+    width: 100%;
+    height: 72px;
+    padding-top: 7px;
+    background-color: #003C71;
+    text-align: center;
+}
+.ui-bar li{
+    width: 20%;
+    float: left;
+}
+.ui-bar li a{
+    width: 100%;
+    color: white;
+}
+.ui-bar li a figure{
+    width: 36px;
+    height:36px;
+    margin: auto;
+    background: url("../img/home.png") no-repeat;
+    background-position:-56px -168px;
+}
+.ui-bar li:nth-child(2) a figure{
+    background-position: -56px -112px;
+}
+.ui-bar li:nth-child(3) a figure{
+    background-position: -168px -56px;
+}
+.ui-bar li:nth-child(4) a figure{
+    background-position: 0 0;
+}
+.ui-bar li:nth-child(5) a figure{
+    background-position: -112px 0;
+}
+.component{
+    clear: both;
+    font-size: 0;/*解决代码换行带来的空格问题 */
+}
+.component span{
+    display: inline-block;
+    width: 50%;
+    overflow: hidden;
+    position: relative;
+}
+.component span img{
+    width: 100%;
+}
+.component span:after{
+    content: "英特尔® Nervana™ 神经网络处理器";
+    font-size: 36px;
+    color: white;
+    text-align: center;
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    top:150px;
+    left:0;
+    z-index: 30;
+}
+.component span img:hover{
+    transform: scale(2);
+}
+.caption{
+    display: inline-block;
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    top: 200px;
+    left: 20px;
+}
+/*owl*/
+.owl-outer{
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+}
+.owl-outer:hover >.owl-left,.owl-outer:hover >.owl-right{
+    display: block;
+}
+.owl-inner{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120%;
+    height: 300px;
+}
+.owl-list{
+    width: 20%;
+    float: left;
+}
+.owl-list img{
+    border: 0;
+}
+.owl-left{
+    position: absolute;
+    top:100px;
+    left: 0;
+    width: 100px;
+    height: 50px;
+    background: url("../img/direction.png") no-repeat;
+    background-position: 0 0;
+    display: none;
+}
+.owl-right{
+    position: absolute;
+    top:100px;
+    right:0;
+    width: 100px;
+    height: 50px;
+    background: url("../img/direction.png") no-repeat;
+    background-position: -100px 0;
+    display: none;
+}
+.inner-list{
+    width: 200px;
+    height:30px;
+    position: absolute;
+    bottom:5px;
+    left: 500px;
+}
+.list-ul{
+    width: 200px;
+    height: 30px;
+}
+.list-ul li{
+    list-style-type: none;
+    float: left;
+    width: 10px;
+    height:10px;
+    border-radius: 5px;
+    border: 1px solid white;
+    margin-left:5px ;
+}
+.on{
+    background-color: white;
+}
+/*********************************footer的样式****************************8*/
+footer{
+    background-color: white;
+    padding-top: 100px;
+    height: 300px;
+}
+.icons{
+    margin-top: 20px;
+    clear: both;
+}
+.icons span{
+    margin-right:20px;
+
+}
+.foot{
+    margin-bottom: 50px;
+}
+.foot li{
+    float: left;
+    margin-right: 10px;
+}
+.footLogo{
+    width: 64px;
+    margin-top: 4.5em;
+    height: 45px;
+    background: url("../img/x9.png") no-repeat;
+    background-position: -320px -436px;
+}
+.footRight{
+    border-left:4px solid #adadad ;
+}

@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/font-awesome.css"/>
+    <!--if lt IE 9-->
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <!--end if-->
+    <title></title>
+</head>
+<body style=" background-color: #0071C5;">
+<header>
+    <nav class="navbar navbar-fixed-top">
+        <div class="container">
+            <div class="row" style="background-color: #0071C5;">
+                <div class="nav-left col-xs-5">
+                    <button onclick="$('#menuModal').show(); " ondblclick="$('#menuModal').hide()" style=" height: 50px; background-color: transparent; border: none; color:white;" class="hidden-md hidden-lg btn">
+                        <span class="glyphicon glyphicon-align-justify" style="font-size: 24px;"></span>
+                        <!--<span class="icon-bar"></span>-->
+                        <!--<span class="icon-bar"></span>-->
+                        <!--<span class="icon-bar"></span>-->
+                    </button>
+                    <ul class="hidden-sm hidden-xs list">
+                        <li  onclick="$('#menuModal').show();$('#product').show();$('#l1').css('background','white');$('#l2').css('background',''); $('#l3').css('background',''); $('#study').hide();$('#support').hide();"><button>产品</button></li>
+                        <li  onclick="$('#menuModal').show();$('#product').hide();$('#study').show();$('#support').hide();$('#l2').css('background','white'); $('#l1').css('background','');$('#l3').css('background','');"><button>学习与开发</button></li>
+                        <li  onclick="$('#menuModal').show();$('#product').hide();$('#study').hide();$('#support').show();$('#l3').css('background','white');$('#l1').css('background','');$('#l2').css('background','');"><button>产品支持</button></li>
+                    </ul>
+                </div>
+                <div class="nav-center col-xs-2 "><img src="img/logo.jpg" alt="" width="50" class="logo"/></div>
+                <div class="nav-right col-xs-5">
+                    <div class="content navbar-right">
+                        <button class="btn" data-toggle="modal" data-target="#lagModal">中文(chinese)<img src="img/lag.jpg"  height="30" alt=""/></button>
+                        <button class="btn" data-toggle="modal" data-target="#loginModal">login <span class="glyphicon glyphicon-user"></span></button>
+                        <button class="btn" data-toggle="modal" data-target="#searchModal"><span class="glyphicon glyphicon-search"></span></button>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </nav>
+    <!--语言选择模态框-->
+    <div class="modal fade in"  id="lagModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" >
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">请选择你的地区</h4>
+                </div>
+                <div class="modal-body">
+                    <ul>
+                    <li><a href="">Asia Pacific</a></li>
+                    <li><a href="">Europe</a></li>
+                    <li><a href="">Latin America</a></li>
+                    <li><a href="">Latin America</a></li>
+                    <li><a href="">Nortn America</a></li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                    </button>
+                    <button type="button" class="btn btn-primary">
+                        提交更改
+                    </button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+    <!--登录模态框-->
+    <div class="modal fade in"  id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" style="width: 400px;height: 370px;background-color: #080808; color: white;" >
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel1" >登录</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="" class="form">
+                        <input type="text" placeholder="Username" class="form-control"/>
+                        <input type="text" placeholder="Password" class="form-control"/>
+                        <p>您登录即表明您同意我们的 <a href="#">服务条款</a></p>
+                        <button type="submit" style="background-color: #31b0d5">登录</button>
+                        <input type="checkbox" style="margin-left: 200px;"/>记住我
+                        <p>忘记了您的英特尔 <a href="">用户名</a>或<a href="">密码</a>？</p>
+                        <p>您是否在英特尔工作？<a href="">在此登录</a>。</p>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                    </button>
+                    <button type="button" class="btn btn-primary">
+                        提交更改
+                    </button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+    <!--搜索模态框-->
+    <div class="modal fade in"  id="searchModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" style="width: 400px;height: 370px;background-color: #080808; color: white;" >
+                <div class="modal-header">
+                    <button type="button" style="color: white" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <form action="">
+                        <input type="text" placeholder="Search Intel.com"/>
+                    </form>
+                </div>
+                <div class="modal-body" style="height:500px;"></div>
+                <div class="modal-footer">
+                    <p><a href="#">Sign in </a>to avvess testricted content.</p>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+   <!--响应式按钮折叠框-->
+    <div class="menucollapse"  id="menuModal">
+            <div>
+                    <div class="menucollapse-header">
+                        <button onclick="$('#menuModal').hide();" type="button" style="color: white" class="close" data-dismiss="modal" aria-hidden="true">
+                            &times;
+                        </button>
+                        <ul class="nav nav-tabs">
+                            <li id="l1"><a href="#product" class="on" onclick="$('#product').show();$('#study').hide();$('#support').hide();$('#l1').css('background','white');$('#l2').css('background',''); $('#l3').css('background','');" >产品</a></li>
+                            <li id="l2"><a href="#study" onclick="$('#product').hide();$('#study').show();$('#support').hide();$('#l2').css('background','white'); $('#l1').css('background','');$('#l3').css('background','');">学习与开发</a></li>
+                            <li id="l3"><a href="#support" onclick="$('#product').hide();$('#study').hide();$('#support').show();$('#l3').css('background','white');$('#l1').css('background','');$('#l2').css('background','');">产品支持</a></li>
+                        </ul>
+                    </div>
+                    <div class="menucollapse-body">
+                        <ul id="product">
+                            <li><a href="">设备和系统</a></li>
+                            <li><a href="">处理器</a></li>
+                            <li><a href="">主板和套件</a></li>
+                            <li><a href="">芯片组</a></li>
+                            <li><a href="">内存和存储</a></li>
+                            <li><a href="">服务器产品</a></li>
+                            <li><a href="">网络和I/O</a></li>
+                            <li><a href="">无线</a></li>
+                            <li><a href="">软件和服务</a></li>
+                            <li><a href="">英特尔网关</a></li>
+                            <li><a href="">FPGA</a></li>
+                            <li><a href="">技术</a></li>
+                            <li><a href="">购买</a></li>
+                        </ul>
+                        <ul id="study">
+                            <li><a href="">在家中</a></li>
+                            <li><a href="">企业</a></li>
+                            <li><a href="">开发人员和创客</a></li>
+                            <li><a href="">合作伙伴</a></li>
+                            <li><a href="">教育工作者</a></li>
+                            <li><a href="">新闻与活动</a></li>
+                        </ul>
+                        <ul id="support">
+                            <li><a href="">产品支持</a></li>
+                            <li><a href="">下载和驱动程序</a></li>
+                            <li><a href="">保修</a></li>
+                            <li><a href="">英特尔投资</a></li>
+                            <li><a href="">企业责任</a></li>
+                            <li><a href="">联系支持人员</a></li>
+                        </ul>
+                    </div>
+                </div><!-- /.modal-content -->
+        </div>
+</header>
+<div class="main">
+    <div style="width: 100%;height: 50px;"></div>
+    <section>
+        <div class="container sct1" title="一切交托我们，收获无限惊喜">
+            <img src="img/1.jpg" alt="" width="100%"/>
+            <div class="sct-content">
+                <h1>一切交托我们，收获无限惊喜</h1>
+                <p>搭载第八代智能英特尔® 酷睿™ 处理器的全新计算机，可在您的家庭欢度假日时，提供您所需的性能、便利性和娱乐功能。</p>
+                <a href="" class="btn btn-primary">了解更多信息</a>
+            </div>
+        </div>
+    </section>
+    <div class="container gray" >
+        <div class="row">
+            <div class="col-sm-4 col-xs-12" style="border-right: 2px solid blue;">
+                <h2>面向IT领导者的资源</h2>
+            </div>
+            <div class="col-sm-8 col-xs-12">
+                <h4><a href=""> 借助案例研究、白皮书和规划指南等实用资源，获取来自英特尔和其他公司及社交媒体的见解，英特尔助您时刻站在 IT 创新的前沿。</a></h4>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <ul class="ui-bar">
+            <li>
+                <a href="">
+                    <figure></figure>
+                    <span>支持</span>
+                </a>
+            </li>
+            <li><a href="">
+                <figure></figure>
+                <span>下载中心</span>
+            </a></li>
+            <li><a href="">
+                <figure></figure>
+                <span>产品规格</span>
+            </a></li>
+            <li><a href="">
+                <figure></figure>
+                <span>了解产品</span>
+            </a></li>
+            <li><a href="">
+                <figure></figure>
+                <span>处理器比较</span>
+            </a></li>
+        </ul>
+    </div>
+    <section>
+        <div class="container sct2"  title="让你的业务面向未来">
+            <img src="img/2.jpg" alt="" width="100%"/>
+            <div class="sct-content">
+                <h1>让你的业务面向未来</h1>
+                <p>业务充溢着大量信息——其中一些可以实现数据驱动的决策，并创造机会。我们将全力以赴，帮助您管理当下的关键工作负载，并为未来做好准备。现在就来开启您的数字化转型。</p>
+                <a href="" class="btn btn-primary">了解如何做到</a>
+            </div>
+        </div>
+    </section>
+    <div class="container  component">
+        <span>
+            <img src="img/3.jpg" alt=""/>
+            <!--<span class="caption">英特尔® Nervana™ 神经网络处理器</span>-->
+        </span>
+        <span>
+            <img src="img/4.jpg" alt=""/>
+        </span>
+    </div>
+    <section>
+        <div class="container sct2"  title="让你的业务面向未来">
+            <img src="img/5.jpg" alt="" width="100%"/>
+            <div class="sct-content">
+                <h1>让你的业务面向未来</h1>
+                <p>业务充溢着大量信息——其中一些可以实现数据驱动的决策，并创造机会。我们将全力以赴，帮助您管理当下的关键工作负载，并为未来做好准备。现在就来开启您的数字化转型。</p>
+                <a href="" class="btn btn-primary">了解如何做到</a>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container sct2"  title="让你的业务面向未来">
+            <img src="img/6.jpg" alt="" width="100%"/>
+            <div class="sct-content">
+                <h1>让你的业务面向未来</h1>
+                <p>业务充溢着大量信息——其中一些可以实现数据驱动的决策，并创造机会。我们将全力以赴，帮助您管理当下的关键工作负载，并为未来做好准备。现在就来开启您的数字化转型。</p>
+                <a href="" class="btn btn-primary">了解如何做到</a>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container sct2"  title="让你的业务面向未来">
+            <img src="img/7.jpg" alt="" width="100%"/>
+            <div class="sct-content">
+                <h1>让你的业务面向未来</h1>
+                <p>业务充溢着大量信息——其中一些可以实现数据驱动的决策，并创造机会。我们将全力以赴，帮助您管理当下的关键工作负载，并为未来做好准备。现在就来开启您的数字化转型。</p>
+                <a href="" class="btn btn-primary">了解如何做到</a>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container sct2"  title="让你的业务面向未来">
+            <img src="img/8.jpg" alt="" width="100%"/>
+            <div class="sct-content">
+                <h1>让你的业务面向未来</h1>
+                <p>业务充溢着大量信息——其中一些可以实现数据驱动的决策，并创造机会。我们将全力以赴，帮助您管理当下的关键工作负载，并为未来做好准备。现在就来开启您的数字化转型。</p>
+                <a href="" class="btn btn-primary">了解如何做到</a>
+            </div>
+        </div>
+    </section>
+    <div class="container" style="padding-left: 0;padding-right: 0; text-align: center ;color: white; background-color: #003C71;padding-bottom: 20px;">
+        <h1>寻找您的新设备</h1>
+        <p>立即购买搭载英特尔® 酷睿™ 处理器并配备 Windows* 10 的新设备。</p>
+        <div class="owl-contain">
+            <div class="owl-outer">
+                <div class="owl-inner">
+                    <div class="owl-list">
+                        <dl>
+                            <dt><img src="img/x1.png" alt=""/></dt>
+                            <dd>平板电脑</dd>
+                        </dl>
+                    </div>
+                    <div class="owl-list">
+                        <dl>
+                            <dt><img src="img/x2.png" alt=""/></dt>
+                            <dd>平板电脑</dd>
+                        </dl>
+                    </div>
+                    <div class="owl-list">
+                        <dl>
+                            <dt><img src="img/x3.png" alt=""/></dt>
+                            <dd>平板电脑</dd>
+                        </dl>
+                    </div>
+                    <div class="owl-list">
+                        <dl>
+                            <dt><img src="img/x4.png" alt=""/></dt>
+                            <dd>平板电脑</dd>
+                        </dl>
+                    </div>
+                    <div class="owl-list">
+                        <dl>
+                            <dt><img src="img/x5.png" alt=""/></dt>
+                            <dd>平板电脑</dd>
+                        </dl>
+                    </div>
+                    <div class="owl-list">
+                        <dl>
+                            <dt><img src="img/x6.png" alt=""/></dt>
+                            <dd>平板电脑</dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="owl-left" onclick="$('.owl-inner').css('left','+=100');for(var n=$('.list-ul li'),i=0;i<n.length;i++ ){if(n[i].className='on'){n[i].className='';} else{n[i].className='on';}}"></div>
+                <div class="owl-right" onclick="$('.owl-inner').css('left','-=100');for(var n=$('.list-ul li'),i=0;i<n.length;i++ ){if(n[i].className='on'){n[i].className='';} else{n[i].className='on';}}"></div>
+                <div class="inner-list">
+                    <ul class="list-ul">
+                        <li class="on" ></li>
+                        <li ></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-1 footLogo" ></div>
+            <div class="col-lg-11 footRight">
+                <ul class="foot">
+                    <li>公司信息</li>
+                    <li>英特尔投资</li>
+                    <li>企业责任</li>
+                    <li>投资者关系</li>
+                    <li>联系我们</li>
+                    <li>新闻发布室</li>
+                    <li>网站地图</li>
+                    <li>招贤纳士</li>
+                </ul>
+                <div class="icons">
+                    <span class="icon-linkedin"></span>
+                    <span class="icon-microphone"></span>
+                    <span class="icon-github-alt"></span>
+                    <span class="icon-film"></span>
+                </div>
+                <div class="icons">
+                    <span>英特尔公司</span>
+                    <span>|</span>
+                    <span>京ICP备14036123号-2</span>
+                    <span>|</span>
+                    <span>使用条款</span>
+                    <span>|</span>
+                    <span>*商标</span>
+                    <span>|</span>
+                    <span>隐私条款</span>
+                    <span>|</span>
+                    <span>Cookie</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/index.js"></script>
+<!--<script>-->
+    <!--window.onload=function(){-->
+        <!--function pre(){-->
+<!--//            var n=$(".list-ul li");-->
+            <!--var d=0;-->
+            <!--$(".owl-inner").css('left',d+'20%');-->
+            <!--return (d-='20%');-->
+
+        <!--}-->
+        <!--function next(){-->
+            <!--var d=0;-->
+            <!--$(".owl-inner").css('left',d-'20%');-->
+            <!--return (d+='20%');-->
+        <!--}-->
+    <!--}-->
+<!--</script>-->
+</html>
